@@ -98,10 +98,10 @@ body {
   background-color: #f7ed4a !important;
 }
 .bg-info {
-  background-color: #82786e !important;
+  background-color: #f30920ad !important;
 }
 .bg-warning {
-  background-color: #879a9f !important;
+  background-color: #f30920ad !important;
 }
 .bg-danger {
   background-color: #b1a374 !important;
@@ -1444,7 +1444,7 @@ margin-right: 1rem;
   color: #001429;
 }
 .cid-s0MGIpBrPL {
-  padding-top: 60px;
+  padding-top: 30px;
 
   background-color: #1d809f;
 }
@@ -1594,4 +1594,6 @@ margin-right: 1rem;
 @media screen and (max-width: 800px){	
   .br-pc { display:none; }
   .br-sp { display:block; }
+  .ft-linkbr { display:block; }
+  .ft-linktag { display:none; }
 }
