@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+//----------------------------------------------
+@mixin button-variant-hover-bright($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: lighten($background, 10%);
+    border-color: lighten($border, 25%);
+  }
+
+  &:hover {
+    color: $color;
+    background-color: lighten($background, 10%);
+    border-color: lighten($border, 12%);
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: lighten($background, 10%);
+    border-color: lighten($border, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: lighten($background, 17%);
+      border-color: lighten($border, 25%);
+    }
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+  }
+
+  .open > & {
+    .dropdown-toggle {
+      background-image: none;
+    }
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+
+  // .badge {
+  //   color: $background;
+  //   background-color: $color;
+  // }
+}
+
+//----------------------------------------------
+@mixin button-variant-hover-inverse($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $background;
+    background-color: $color;
+    // border-color: darken($border, 25%);
+  }
+
+  &:hover {
+    color: $background;
+    background-color: $color;
+    // border-color: darken($border, 12%);
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $background;
+    background-color: $color;
+    // border-color: darken($border, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $background;
+      background-color: $color;
+      // border-color: darken($border, 25%);
+    }
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+  }
+
+  .open > & {
+    .dropdown-toggle {
+      background-image: none;
+    }
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $background;
+      // border-color: $border;
+    }
+  }
+
+  // .badge {
+  //   color: $background;
+  //   background-color: $color;
+  // }
+}
+
+// Button
+//----------------------------------------------
+// .btn-*** {
+//   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+// }
+
+//----------------------------------------------
+.btn-multiline {
+  white-space: normal;
+}
+
+//----------------------------------------------
+.btn {
+  @include transition(all $hover-transition-speed ease);
+}
+
+//----------------------------------------------
+.btn-text-blue-with-shadow {
+  @include button-variant(#0070c0, #fff, #a6a6a6);
+  @include box-shadow (-1px 2px 12px 0px rgba(0,0,0,0.75));
+  padding: 9px 23px;
+  font-size: 22px;
+  border-width: 2px;
+  border-radius: 50px;
+
+  @media (max-width: $screen-sm-max) {
+    font-size: 18px;
+  }
+}
+
+//----------------------------------------------
+.btn-blue {
+  @include button-variant(#fff, #00b0f0, #00b0f0);
+  padding: 20px;
+  font-size: 26px;
+  line-height: 1.1;
+  border-radius: 0;
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+//----------------------------------------------
+.frame-paper {
+  position: relative;
+  z-index: 1;
+  max-width: 910px;
+  margin-right: auto;
+  margin-left: auto;
+
+  &:before {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    background: url("../img/frame/middle.png") no-repeat 50% 100%;
+    background-size: 100%;
+    content: "";
+
+    @media (max-width: $screen-xs-max) {
+      top: 4%;
+    }
+  }
+
+  .inner {
+    position: relative;
+    z-index: 1;
+    padding: 5.2rem 9.5rem 7rem;
+
+    @media (max-width: $screen-xs-max) {
+      padding: 7vw 6vw;
+    }
+
+    @media (max-width: $screen-xxs-max) {
+      padding: 14vw 6vw 10vw;
+    }
+  }
+}
+
+//----------------------------------------------
+.frame-paper-top {
+  background: url("../img/frame/top.png") no-repeat 50% 0;
+  background-size: 100%;
+}
+
+//----------------------------------------------
+.frame-paper-bottom {
+  background: url("../img/frame/bottom.png") no-repeat 50% 100%;
+  background-size: 100%;
+}

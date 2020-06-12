@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+//----------------------------------------------
+.title-black {
+  margin-top: 0;
+  font-size: 52px;
+  font-weight: bold;
+  color: #000;
+
+  @media (max-width: $screen-md-max) {
+    font-size: 5vw;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 7.6vw;
+  }
+}
+
+//----------------------------------------------
+.title-white {
+  margin-top: 0;
+  font-size: 52px;
+  font-weight: bold;
+  color: #fff;
+
+  @media (max-width: $screen-md-max) {
+    font-size: 5vw;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 7.6vw;
+  }
+}
+
+//----------------------------------------------
+.title-dark-blue {
+  margin-top: 0;
+  font-size: 52px;
+  font-weight: bold;
+  color: #002060;
+
+  @media (max-width: $screen-md-max) {
+    font-size: 5vw;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 7.6vw;
+  }
+}
+
+//----------------------------------------------
+.title-blue {
+  margin-top: 0;
+  font-size: 42px;
+  font-weight: bold;
+  color: #0070c0;
+
+  @media (max-width: $screen-md-max) {
+    font-size: 3.5vw;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 30px;
+  }
+}

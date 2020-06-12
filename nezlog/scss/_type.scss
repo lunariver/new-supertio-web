@@ -1,0 +1,595 @@
+@charset "UTF-8";
+
+//----------------------------------------------
+mark,
+.mark {
+  display: inline-block;
+  padding: .1em 0;
+  background-color: #fcee21;
+}
+
+// Page header
+// -------------------------
+
+.page-header {
+  display: table;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 35px;
+  margin: 0;
+  text-align: center;
+  background-color: #ccc;
+  border-bottom: 0;
+
+  @media (min-width: $screen-xs-min) {
+    height: 200px;// Can not use min-height. Because of it is not working on Firefox.
+  }
+
+  .title {
+    display: table-cell;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.1;
+    vertical-align: middle;
+  }
+
+  &.paint-drop-green {
+    padding: 0;
+    background: url("../img/common/paint-drop.png") no-repeat 50% 0;
+
+    .title {
+      padding-top: 48px;
+      padding-bottom: 48px;
+      vertical-align: top;
+    }
+  }
+
+  small {
+    display: block;
+  }
+}
+
+//----------------------------------------------
+ul,
+ol {
+  padding-left: 1.5em;
+  line-height: 1.428;
+}
+
+//----------------------------------------------
+.list-inline {
+  margin-left: 0;
+
+  > li {
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  &.bordered {
+    > li {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-bottom: 10px;
+      line-height: 1.1;
+      border-right: 1px solid #999;
+
+      &:first-child {
+        border-left: 1px solid #999;
+      }
+    }
+  }
+}
+
+//----------------------------------------------
+.list-dot-orange {
+  padding: 0;
+  margin: 0;
+
+  @media (max-width: $screen-sm-max) {
+    font-size: 12px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 9px;
+  }
+
+  li {
+    position: relative;
+    padding-left: 10px;
+    line-height: 1.7;
+
+    @media (max-width: $screen-sm-max) {
+      line-height: 1.5;
+    }
+
+    &:before {
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 9px;
+      height: 9px;
+      margin: auto;
+      background-color: #e6872c;
+      border-radius: 50%;
+      content: "";
+
+      @media (max-width: $screen-sm-max) {
+        top: 4px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+//----------------------------------------------
+.list-disc-orange-lg {
+  li {
+    position: relative;
+    padding: 0 0 0 1.5em;
+
+    &:before {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      display: block;
+      width: 10px;
+      height: 10px;
+      background-color: #ff8c00;
+      border-radius: 5px;
+      content: "";
+    }
+  }
+}
+
+//----------------------------------------------
+.list-disc-dark-blue {
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 13px;
+
+    &:before {
+      position: absolute;
+      top: 6px;
+      left: 0;
+      display: block;
+      width: 8px;
+      height: 8px;
+      background-color: #1e374e;
+      border-radius: 5px;
+      content: "";
+
+      @media (max-width: $screen-xs-max) {
+        top: 5px;
+      }
+    }
+  }
+}
+
+//----------------------------------------------
+.list-sns {
+  @media (min-width: 1299px) {
+    padding-left: 15px;
+  }
+
+  .icon {
+    @media (max-width: $screen-md-max) {
+      width: 28px;
+    }
+  }
+}
+
+//----------------------------------------------
+.dl-list-indent {
+  margin-bottom: 0;
+
+  &,
+  dd {
+    overflow: hidden;
+    zoom: 1;
+  }
+
+  dt,
+  dd {
+    display: table-cell;
+    line-height: 1.4;
+    vertical-align: top;
+  }
+
+  dt {
+    padding-right: 5px;
+    font-weight: normal;
+
+    img {
+      display: block;
+    }
+  }
+
+  dd {
+    width: 10000px;
+  }
+
+  &.cleared-xxs {
+    @media (max-width: $screen-xxs-max) {
+      dt {
+        display: block;
+      }
+
+      dd {
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+//----------------------------------------------
+.highlight-yellow {
+  background: linear-gradient(transparent 60%, #ffff66 60%);
+}
+
+// sass-lint:disable brace-style
+// stylelint-disable block-opening-brace-space-before, block-opening-brace-space-after, block-closing-brace-space-before
+//----------------------------------------------
+.text-gray {color: #ccc !important;}
+.text-red  {color: #f00 !important;}
+// sass-lint:enable brace-style
+// stylelint-enable block-opening-brace-space-before, block-opening-brace-space-after, block-closing-brace-space-before
+
+//----------------------------------------------
+.text-bold {
+  font-weight: bold !important;
+}
+
+//----------------------------------------------
+.text-break {
+  word-break: break-all !important;
+}
+
+//----------------------------------------------
+.text-emphasis {
+  font-size: 3rem;
+  line-height: 4.5rem;
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  .fs-xxs {
+    font-size: 1rem;
+  }
+
+  .fs-xs {
+    font-size: 1.5rem;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .fs-sm {
+    font-size: 2rem;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .fs-lg {
+    font-size: 6rem;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 2rem;
+    }
+  }
+
+  .fs-xlg {
+    font-size: 8rem;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 3rem;
+    }
+  }
+}
+
+//----------------------------------------------
+.text-center-xs {
+  @media (max-width: $screen-xs-max) {
+    text-align: center !important;
+  }
+}
+
+.text-center-sm {
+  @media (max-width: $screen-sm-max) {
+    text-align: center !important;
+  }
+}
+
+.text-center-md {
+  @media (max-width: $screen-md-max) {
+    text-align: center !important;
+  }
+}
+
+//----------------------------------------------
+.text-switch-color {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px 0 0 20%;
+
+  .text-overflow {
+    position: absolute;
+    top: 50%;
+    left: 7.5%;
+    margin: -35px 0 0;
+
+    .inner {
+      position: relative;
+      font-size: 100px;
+      font-weight: bold;
+      line-height: 100px;
+      color: rgba(255, 255, 255, 1);
+      white-space: nowrap;
+
+      @media (max-width: $screen-sm-max) {
+        font-size: 7vw;
+      }
+
+      .text-below {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      &:nth-child(2) {
+        margin: 15px 0 0;
+      }
+    }
+  }
+
+  .text-black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    overflow: hidden;
+
+    .text-overflow {
+      left: 37.5%;
+
+      .inner {
+        color: rgba(0, 0, 0, 1);
+      }
+    }
+  }
+
+  .bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    overflow: hidden;
+    background: url("../img/common/bg-room.jpg") no-repeat 50% 50%;
+    background-size: cover;
+  }
+}
+
+// stylelint-disable
+// sass-lint:disable-all
+//----------------------------------------------
+// TODO: set offset via variable
+@mixin text-shadow-outline($color) {
+  text-shadow:
+    // outline
+    2px 2px 0 $color,
+    2px -2px 0 $color,
+    -2px 2px 0 $color,
+    -2px -2px 0 $color,
+    2px 0 0 $color,
+    0 2px 0 $color,
+    -2px 0 0 $color,
+    0 -2px 0 $color;
+
+  // TODO: avoid @media (max-width:640px) and (max-width:640px) {}
+  @media (max-width: $screen-xs-max) {
+    text-shadow:
+      // outline
+      1px 1px 0 $color,
+      1px -1px 0 $color,
+      -1px 1px 0 $color,
+      -1px -1px 0 $color,
+      1px 0 0 $color,
+      0 1px 0 $color,
+      -1px 0 0 $color,
+      0 -1px 0 $color;
+  }
+}
+
+@mixin text-shadow-outline-blurred($color) {
+  text-shadow:
+    // outline
+    2px 2px 0 $color,
+    2px -2px 0 $color,
+    -2px 2px 0 $color,
+    -2px -2px 0 $color,
+    2px 0 0 $color,
+    0 2px 0 $color,
+    -2px 0 0 $color,
+    0 -2px 0 $color,
+
+      // blur
+    2px 3px 2px $color,
+    2px -3px 2px $color,
+    -2px 3px 2px $color,
+    -2px -3px 2px $color,
+    3px 0 2px $color,
+    0 3px 2px $color,
+    -3px 0 2px $color,
+    0 -3px 2px $color;
+
+  @media (max-width: $screen-xs-max) {
+    text-shadow:
+      // outline
+      1px 1px 0 $color,
+      1px -1px 0 $color,
+      -1px 1px 0 $color,
+      -1px -1px 0 $color,
+      1px 0 0 $color,
+      0 1px 0 $color,
+      -1px 0 0 $color,
+      0 -1px 0 $color,
+
+        // blur
+      1px 2px 1px $color,
+      1px -2px 1px $color,
+      -1px 2px 1px $color,
+      -1px -2px 1px $color,
+      2px 0 1px $color,
+      0 2px 1px $color,
+      -2px 0 1px $color,
+      0 -2px 1px $color;
+  }
+}
+// sass-lint:enable-all
+// stylelint-enable
+
+//----------------------------------------------
+.text-shadow-outline-black {
+  @include text-shadow-outline(#000);
+  color: #fff;
+}
+
+.text-shadow-outline-blurred-black {
+  @include text-shadow-outline-blurred(#000);
+  color: #fff;
+}
+
+//----------------------------------------------
+.text-fluffy {
+  > span {
+    @include transition(all 1.4s ease);
+    display: inline-block;
+    white-space: pre-wrap;
+    opacity: 0;
+
+    &:nth-child(0) {
+      transform: translate(1px, 8px);
+      transition-delay: .1s;
+    }
+
+    &:nth-child(1) {
+      transform: translate(-2px, 4px);
+      transition-delay: .3s;
+    }
+
+    &:nth-child(2) {
+      transform: translate(3px, 2px);
+      transition-delay: .4s;
+    }
+
+    &:nth-child(3) {
+      transform: translate(-4px, 8px);
+      transition-delay: .6s;
+    }
+
+    &:nth-child(4) {
+      transform: translate(-2px, 2px);
+      transition-delay: .8s;
+    }
+
+    &:nth-child(5) {
+      transform: translate(2px, 4px);
+      transition-delay: 1s;
+    }
+
+    &:nth-child(6) {
+      transform: translate(2px, -4px);
+      transition-delay: 1.2s;
+    }
+
+    &:nth-child(7) {
+      transform: translate(-2px, 1px);
+      transition-delay: 1.3s;
+    }
+
+    &:nth-child(8) {
+      transform: translate(4px, -4px);
+      transition-delay: 1.4s;
+    }
+
+    &:nth-child(9) {
+      transform: translate(2px, 2px);
+      transition-delay: 1.5s;
+    }
+
+    &:nth-child(10) {
+      transform: translate(-2px, -1px);
+      transition-delay: 1.6s;
+    }
+
+    &:nth-child(11) {
+      transform: translate(-2px, 1px);
+      transition-delay: 1.8s;
+    }
+
+    &:nth-child(12) {
+      transform: translate(2px, -4px);
+      transition-delay: 2s;
+    }
+
+    &:nth-child(13) {
+      transform: translate(-2px, 3px);
+      transition-delay: 2.1s;
+    }
+
+    &:nth-child(14) {
+      transform: translate(2px, 1px);
+      transition-delay: 2.2s;
+    }
+
+    &:nth-child(15) {
+      transform: translate(-2px, -3px);
+      transition-delay: 2.3s;
+    }
+
+    &:nth-child(16) {
+      transform: translate(-2px, -3px);
+      transition-delay: 2.4s;
+    }
+
+    &:nth-child(17) {
+      transform: translate(-2px, -3px);
+      transition-delay: 2.5s;
+    }
+
+    &:nth-child(18) {
+      transform: translate(-2px, -3px);
+      transition-delay: 2.6s;
+    }
+
+    &:nth-child(19) {
+      transform: translate(-2px, -3px);
+      transition-delay: 2.7s;
+    }
+  }
+
+  &.active {
+    > span {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+//----------------------------------------------
+address {
+  margin-bottom: 0;
+  line-height: 1.1;
+}

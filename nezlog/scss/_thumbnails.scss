@@ -1,0 +1,104 @@
+//
+// Thumbnails
+// --------------------------------------------------
+
+// // Mixin and adjust the regular image class
+// .thumbnail {
+//   display: block;
+//   padding: $thumbnail-padding;
+//   margin-bottom: $line-height-computed;
+//   line-height: $line-height-base;
+//   background-color: $thumbnail-bg;
+//   border: 1px solid $thumbnail-border;
+//   border-radius: $thumbnail-border-radius;
+//   @include transition(border .2s ease-in-out);
+//
+//   > img,
+//   a > img {
+//     @include img-responsive;
+//     margin-left: auto;
+//     margin-right: auto;
+//   }
+//
+//   // [converter] extracted a&:hover, a&:focus, a&.active to a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active
+//
+//   // Image captions
+//   .caption {
+//     padding: $thumbnail-caption-padding;
+//     color: $thumbnail-caption-color;
+//   }
+// }
+//
+// // Add a hover state for linked versions only
+// a.thumbnail:hover,
+// a.thumbnail:focus,
+// a.thumbnail.active {
+//   border-color: $link-color;
+// }
+
+//----------------------------------------------
+@mixin bg-switchboard {
+  background-image: url("../img/common/bg-switchboard.jpg");
+}
+
+// --------------------------------------------------
+a {
+  &.thumbnail {
+    @include transition(all $hover-transition-speed ease);
+  }
+}
+
+//----------------------------------------------
+.thumbnail-bg-multiply {
+  position: relative;
+  padding: 0;
+
+  @media (max-width: $screen-sm-max) {
+    @include center-block ();
+    max-width: 480px;
+  }
+
+  .title {
+    position: relative;
+    z-index: 1;
+    padding: 16px 5px 13px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fff;
+    text-align: center;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      background-position: 50% 0;
+      content: "";
+      background-blend-mode: multiply;
+    }
+
+    &.bg-light-orange {
+      &:after {
+        background-color: #d47d12;
+      }
+    }
+  }
+
+  .bg-switchboard {
+    @include bg-switchboard();
+
+    .title {
+      &:after {
+        @include bg-switchboard();
+      }
+    }
+  }
+
+  .img {
+    height: 147px;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+  }
+}

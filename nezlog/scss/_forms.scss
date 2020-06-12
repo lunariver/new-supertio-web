@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+//----------------------------------------------
+label {
+  cursor: pointer;
+
+  &.error {
+    padding: 5px 10px;
+    font-size: 13px;
+    color: #fff;
+    cursor: default;
+    background-color: #f00;
+  }
+}
+
+//----------------------------------------------
+select {
+  cursor: pointer;
+}
+
+//----------------------------------------------
+.form-container {
+  @include center-block ();
+  @include input-size(".form-control", 82px, 15px, 15px, 18px, 1.4, 15px);
+  max-width: 1200px;
+
+  .form-control {
+    @include form-control-focus($color: $input-border-focus);
+    @include placeholder($color: #000);
+    background-color: #f2f2f2;
+    border: 2px solid #7f7f7f;
+
+    @media (max-width: $screen-xs-max) {
+      height: 60px;
+      font-size: 15px;
+    }
+  }
+
+  textarea {
+    &.form-control {
+      height: 196px;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 32px;
+
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .list-inline {
+    margin-bottom: 0;
+    margin-left: -10px;
+
+    li {
+      margin-right: 10px;
+      margin-left: 10px;
+
+      @media (max-width: $screen-xxs-max) {
+        display: block;
+      }
+    }
+  }
+}
+
+//----------------------------------------------
+.form-horizontal {
+  .control-label {
+    @media (min-width: $screen-sm-min) {
+      text-align: left;
+    }
+  }
+}
+
+//----------------------------------------------
+.form-inline {
+  .form-control {
+    vertical-align: 1px;
+  }
+}
+
+//----------------------------------------------
+.form-inline-force {
+  .form-control {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    // vertical-align: 1px;
+  }
+}
+
+//----------------------------------------------
+textarea {
+  &.form-control {
+    height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    line-height: 1.4;
+  }
+}
