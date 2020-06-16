@@ -57,17 +57,16 @@
         </div>
     </nav>
 </section>
-  <video src="assets/images/movie/bgvideo.webm" playsinline muted autoplay></video>
+
 <section class="cid-s0Mmbrpr94 mbr-fullscreen mbr-parallax-background" id="header2-1" style="z-index:0";>
    <div class="feature-movie  box">
     <!--video src="assets/images/movie/bgvideo.mp4" class="video fitMovie"  muted="" autoplay="" loop="" playsinline-->
 
-<!--        <video  playsinline autoplay loop muted class="video fitMovie" poster="assets/images/adobestock-300257078-2000x1125.jpeg"  preload="none">-->
-
-<!--&lt;!&ndash;		<source src="assets/images/movie/bgvideo.mp4" type="video/mp4">&ndash;&gt;-->
-<!--		<source src="assets/images/movie/bgvideo.webm" type="video/webm">-->
-<!--        <p>video要素がサポートされていないブラウザでご覧になっています。</p>-->
-<!--        </video>-->
+        <video  playsinline autoplay loop muted class="video fitMovie" id="myvideo" poster="assets/images/adobestock-300257078-2000x1125.jpeg"  preload="none">
+		<source src="assets/images/movie/bgvideo.mp4" type="video/mp4">
+		<source src="assets/images/movie/bgvideo.webm" type="video/webm">
+        <p>video要素がサポートされていないブラウザでご覧になっています。</p>
+        </video>
     </div>
 
     <div class="container align-center" style=" z-index: 2;">
@@ -593,6 +592,11 @@ engineering<br>(知能機械学 修士)</p>
   <script src="assets/theme/js/script.js"></script>
   <script src="assets/formoid/formoid.min.js"></script>
 
+  <script>
+      const v=document.querySelector('#myvideo');
 
+      v.muted = true;
+      v.play();
+  </script>
 </body>
 </html>
