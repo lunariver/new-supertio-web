@@ -9,7 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Meiryo UI","Meiryo", "Hiragino Kaku Gothic ProN", "MS UI Gothic",sans-serif;
   color: #444;
 }
 
@@ -23,7 +23,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6, .font-primary {
-  font-family: "Roboto", sans-serif;
+  font-family: "Meiryo UI","Meiryo", "Hiragino Kaku Gothic ProN","MS UI Gothic", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -333,7 +333,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   height: 95%;
   /*background: linear-gradient(to right, rgba(30, 67, 86, 0.1), rgba(30, 67, 86, 0.1)), url("../img/testimonials/Supert_space.jpeg") center top no-repeat;*/
   /*background: linear-gradient(to right, rgba(30, 67, 86, 0.1), rgba(30, 67, 86, 0.1));*/
-  background: linear-gradient(to right, rgba(30, 67, 86, 0.1), rgba(30, 67, 86, 0.1)), url("../img/stripe.png") center top repeat;
+  background: linear-gradient(to right, rgba(30, 67, 86, 0.1), rgba(30, 67, 86, 0.1)), url("../img/stripe80.png") center top repeat;
   z-index: 0;
   border-radius: 0 0 50% 50%;
   transform: translateX(-50%) rotate(0deg);
